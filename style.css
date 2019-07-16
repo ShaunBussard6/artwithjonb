@@ -1,0 +1,335 @@
+:root {
+        --primary-color: rgb(156, 147, 121);
+        --secondary-color: rgb(77, 73, 64);
+        --dark-color: rgb(0, 0, 0);
+        --light-color: rgb(238, 235, 228);
+        --max-width: 1180px;
+}
+
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+}
+
+body {
+        font-family: 'oswald', sans-serif;
+        line-height: 1.5;
+        background: var(--light-color);
+}
+
+a {
+        color: #333;
+        text-decoration: none;
+}
+
+ul {
+        list-style: none;
+
+}
+
+img {
+        width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+        margin-bottom: .55rem;
+        line-height: 1.3;
+
+}
+
+/* utility */
+
+.container {
+        max-width: var(--max-width);
+        margin: auto;
+        /* padding: 2rem; */
+        overflow: hidden;
+}
+
+.btn {
+        display: inline-block;
+        border: none;
+        background: var(--dark-color);
+        color: #fff;
+        padding: 0.5rem 1.5rem;
+        margin: 1rem;
+        border-radius: 5px;
+
+}
+
+.btn:hover {opacity: 0.9;}
+.btn-block {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+}
+.btn-light { background: var(--light-color)}
+.btn-primary { background: var(--primary-color)}
+.btn-secondary { background: var(--secondary-color)}
+
+.card {
+        background: #fff;
+        padding: 1rem;
+}
+/* nav */
+#main-nav {
+        top: 0;
+        position: sticky;
+        background: #fff;
+        z-index: 2;
+}
+
+#main-nav .container {
+        display: grid;
+        grid-template-columns: 2fr 1fr 2fr;
+        padding: 1rem;
+        align-items: center;
+}
+
+#main-nav .container #logo {
+        width: 180px;
+        font-size: 1.5rem;
+        
+}
+
+#main-nav ul {
+        justify-self: end;
+        display: flex;
+
+}
+
+#main-nav ul li a  {
+        padding: 0.75rem;
+        font-weight: bold;
+
+}
+
+#main-nav ul li a.current {
+        background: var(--primary-color);
+        border-radius: 5px;
+}
+#main-nav ul li a:hover {
+        background: var(--light-color);
+        border-radius: 5px;
+}
+
+#main-nav #social {
+        justify-self: center;
+}
+
+#main-nav #social i {
+        color: #777;
+        margin-right: .5rem;
+}
+
+/* Showcase */
+
+#showcase {
+        color: #fff;
+        background: #333;
+        padding: 2rem;
+        position: relative;
+
+}
+
+.showcase-content {
+        text-align: center;
+}
+
+.showcase-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 1rem;
+}
+
+.showcase-container .img img {
+        width: 100%;
+        height: 100%;
+        /* width: 250px;
+        height: 250px; */
+        border: #fff 1px solid;
+        transition-property: all;
+        transition-duration: 0.5s;
+}
+
+.showcase-container .img img:hover {
+width: 255px;
+height: 255px;
+border: #fff 2px solid;
+}
+
+#different-styles .styles-container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 1rem;
+}
+#different-styles .styles-container p {
+        margin-bottom: 0.5rem;
+}
+
+#different-styles .styles-container > *:first-child,
+different-styles .styles-container > *:last-child {
+display: grid;
+/* grid-template-columns: repeat(2, 1fr); */
+grid-gap: 1rem;
+grid-column: 1 / span 2;
+}
+
+#different-styles h2 {
+text-align: center;
+margin: 1rem;
+padding: 1rem;
+background: var(--primary-color);
+
+}
+
+#main-footer .footer-container {
+        background: var(--dark-color);
+        color: #fff;
+        
+}
+
+.footer-container {
+        padding: 1rem;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+
+}
+
+.footer-container h4 {
+color: #777
+}
+
+
+
+#main-footer .footer-container #contact {
+        justify-content: center;
+        text-align: center;
+}
+
+/* About */
+
+#showcase .container #about {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+}
+
+#showcase .container #about p {
+        padding: 1rem;
+        color: #333;
+}
+
+#showcase .container #about-title {
+        text-align: center;
+        font-size: 2rem;
+        
+}
+
+/* contact page */
+
+#contact .text-fields {
+        display: grid;
+        grid-template-areas: 
+        'name email'
+        'subject phone'
+        'message message';
+        grid-gap: 1.2rem;
+        margin-bottom: 1.2rem;
+        /* width: 1000px; */
+        margin: auto;
+        width: 80%;
+
+}
+
+#contact h2 {
+        text-align: center;
+        margin: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: #333 1px dotted;
+}
+
+#contact .text-fields .name-input { grid-area: name; }
+#contact .text-fields .subject-input { grid-area: subject; }
+#contact .text-fields .email-input { grid-area: email; }
+#contact .text-fields .phone-input { grid-area: phone; }
+#contact .text-fields .message-input { grid-area: message; }
+#contact .text-fields ::placeholder {
+        color: #333;
+}
+
+#contact form button {
+        width: 40%;
+      margin-left: 30%;
+      margin-right: 30%;
+      
+       
+}
+
+@media (max-width: 1120px) {
+        .showcase-container {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                
+        }
+
+
+}
+
+
+@media (max-width: 780px) {
+        .showcase-container {
+                display: grid;
+                grid-template-columns: 1fr;
+                
+                
+                
+        }
+
+        #main-nav .container #social {
+                display: none;
+        }
+
+        #main-nav .container {
+                grid-template-columns: 1fr;
+                grid-gap: 1rem;
+              
+              
+          
+        }
+
+        #main-nav .container #logo
+         {
+                margin: auto;
+        }
+
+        #main-nav .container ul {
+           margin: auto;
+               
+        }
+
+   
+}
+@media (max-width: 580px) {
+        #showcase .container #about {
+                grid-template-columns: 1fr;
+        }
+        #contact .text-fields {
+                grid-template-areas: 
+        'name' 
+        'email'
+        'subject'
+        'phone'
+        'message';
+        }
+        #different-styles .styles-container {
+                grid-template-columns: 1fr;
+        }
+
+        #different-styles .styles-container > *:first-child,
+different-styles .styles-container > *:last-child {
+        grid-column: 1;
+}
+
+}
