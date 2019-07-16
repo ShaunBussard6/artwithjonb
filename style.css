@@ -302,6 +302,7 @@ color: #777
         #main-nav .container #logo
          {
                 margin: auto;
+                font-size: 1.5rem;
         }
 
         #main-nav .container ul {
