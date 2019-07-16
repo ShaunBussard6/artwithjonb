@@ -313,6 +313,14 @@ color: #777
    
 }
 @media (max-width: 580px) {
+       .showcase-container .img:nth-of-type(4),
+       .showcase-container .img:nth-of-type(2),
+       .showcase-container .img:nth-of-type(6),
+       .showcase-container .img:nth-of-type(1)
+        {
+                display: none;
+        }
+
         #showcase .container #about {
                 grid-template-columns: 1fr;
         }
