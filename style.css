@@ -155,8 +155,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .showcase-container .img img:hover {
-width: 105%;
-height: 105%;
+/* width: 105%;
+height: 105%; */
 border: #fff 2px solid;
 }
 
